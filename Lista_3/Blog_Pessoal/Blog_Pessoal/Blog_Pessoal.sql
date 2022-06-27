@@ -51,8 +51,8 @@ CREATE TABLE IF NOT EXISTS `db_blog_pessoal`.`tb_postagens` (
   `tema_id` BIGINT NOT NULL,
   `usuarios_id` BIGINT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_tb_postagens_tb_temas_idx` (`tema_id` ASC) VISIBLE,
-  INDEX `fk_tb_postagens_tb_usuarios1_idx` (`usuarios_id` ASC) VISIBLE,
+  INDEX `fk_tb_postagens_tb_temas_idx` (`tema_id` ASC),
+  INDEX `fk_tb_postagens_tb_usuarios1_idx` (`usuarios_id` ASC),
   CONSTRAINT `fk_tb_postagens_tb_temas`
     FOREIGN KEY (`tema_id`)
     REFERENCES `db_blog_pessoal`.`tb_temas` (`id`)
